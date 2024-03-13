@@ -21,6 +21,7 @@ class MongoDbService extends DbService {
             description: articleData.description,
             url: articleData.url,
             imageUrl: articleData.imageUrl,
+            isSaved: true,
         });
         return StatusCodes.CREATED;
     }
