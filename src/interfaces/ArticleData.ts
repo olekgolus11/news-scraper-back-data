@@ -4,7 +4,6 @@ interface ArticleData {
     description: string;
     url: string;
     imageUrl: string;
-    isSaved?: boolean;
 }
 
 export default ArticleData;

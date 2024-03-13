@@ -7,7 +7,6 @@ export const SavedArticleDataSchema = new mongoose.Schema({
     description: String,
     url: String,
     imageUrl: String,
-    isSaved: Boolean,
 });
 
 interface SavedArticleModelInterface extends ArticleData, mongoose.Document {}
