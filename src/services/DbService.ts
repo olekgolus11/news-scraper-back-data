@@ -1,3 +1,4 @@
+import { StatusCodes } from "http-status-codes";
 import ArticleData from "../interfaces/ArticleData";
 
 abstract class DbService {
@@ -9,11 +10,9 @@ abstract class DbService {
 
     public abstract getSavedArticles(): Promise<ArticleData[]>;
 
-    public abstract addToSavedArticles(articleId: string): Promise<void>;
+    public abstract addToSavedArticles(articleData: ArticleData): Promise<StatusCodes>;
 
     public abstract removeFromSavedArticles(articleId: string): Promise<void>;
-
-    public abstract addFetchedArticlesToAllArticlesCollection(articles: ArticleData[]): Promise<void>;
 }
 
 export default DbService;

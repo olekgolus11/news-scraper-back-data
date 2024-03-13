@@ -11,6 +11,7 @@ const app = express();
     await connectToDb();
 })();
 
+app.use(express.json());
 app.use(cors());
 app.use("/news", newsRouter);
 app.use(errorHandler);
